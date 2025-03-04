@@ -14,11 +14,11 @@ export const DefaultLayout: FC<DefaultLayoutProps> = ({ children }) => (
 			<Link
 				isExternal
 				className="flex items-center gap-1 text-current"
-				href="https://heroui.com"
-				title="heroui.com homepage"
+				href="https://bankmonitor.hu"
+				title="bankmonitor.hu homepage"
 			>
-				<span className="text-default-600">Powered by</span>
-				<p className="text-primary">HeroUI</p>
+				<span className="text-default-600">Copyright 2025 </span>
+				<p className="text-primary">Bankmonitor</p>
 			</Link>
 		</footer>
 	</div>
