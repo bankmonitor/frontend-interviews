@@ -1,6 +1,14 @@
 import type { PaginationParams, PaginationResult } from "@/components/calculators/listing-calculator/types";
 import type { HomeSavingsCalculatorParameters, HomeSavingsCalculatorResult } from "./calculation.type";
 
+/**
+ * Calculates home savings based on the provided parameters and pagination settings.
+ *
+ * @param props - The parameters for the home savings calculator.
+ * @param paging - The pagination parameters.
+ * @returns A promise that resolves to a paginated result of home savings calculator results.
+ * @throws Will throw an error if the network response is not ok.
+ */
 export const calculation = async (
 	props: HomeSavingsCalculatorParameters,
 	paging: PaginationParams,
@@ -13,13 +21,11 @@ export const calculation = async (
 	});
 
 	const response = await fetch(url.toString());
-	if (response.ok) {
+	if (!response.ok) {
 		throw new Error("Network response was not ok");
 	}
 
 	const list = (await response.json()) as HomeSavingsCalculatorResult[];
-
-	// await new Promise((resolve) => setTimeout(resolve, 1000));
 
 	return {
 		results: list.slice((paging.page - 1) * paging.size, paging.page * paging.size),
