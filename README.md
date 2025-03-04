@@ -1,23 +1,37 @@
-# Frontend Interview feladat
+# Frontend Interjú feladat
 
-## Interview folyamata
+## Interjú folyamata
 - 10 perc bemutatkozás
 - 40 perc feladat megoldás
 - 10 perc kérdezz felelek
 
+A feladat megoldására 40 perc áll rendelkezésre. Nem kell minden részét megoldani és nem is kell a tökéletes megoldás élérésére törekedni. Gondolkodj hangosan és kérdezz bátran, mert nem olyan embert keresünk aki mindent tud (mert olyan nincs), hanem akinek jó a gondolkozás módja!
+
 ## Feladat: Lakástakarék kalkulátor
 
-Az üzlet szeretne egy lakástakarék termékekek összehasonlító kalkulátort, ennek el is készültek a tervei és a hozzá tartozó backendi API is. Munkatár Matyi elkezdte a megvalósítást, de sajnos menet közben lebetegedett 🤒...
-Fejezd be a kalkulátor fejlesztését!
+A csapat szeretne készíteni egy lakástakarék termékeket összehasonlító kalkulátort. A kalkulátorban meg kell adni, a havonta megtakarítani kívánt összeget aminek hatására a kalkulátor egy példa kalkulációt végez és megmutatja a felhasználónak nagyjából milyen hozamra számíthat. Ezek után a felhasználó kérhet egy részletes listát, hogy a piacon milyen termékek érhetők el. A fejlesztés backendi része illetve a frontendi felület váza is elkészült, viszont Munkatárs Matyi menet közben sajnos lebetegedett🤒 ezért neked kéne befejezni a kalkulátort. Leírása alapján a példa kalkulációnál akadt el a fejlesztésben.
+
+Lentebb látod a részfeladatokat, de ezekhez készültek tesztesetek így TDD módszerrel is megpróbálkozhatsz. A teszteseteket a következőképpen tudod futtatni:
+
+```bash
+npm run test
+```
+
+Vagy VScode esetén Vitest pluginnal.
 
 ### Részfeladatok
 
-1. Matyi megpróbálta a példakalkulációt megvalósítani, de valamiért nem működik. Kérlek javítsd ki a hibát!
+1. Példakalkuláció befejezése
 
-2. A találati lista szerkezete elkészült, de a kalkulátor még nem működik. Implementáld a kalkulátor működését!
-__Elvárások__:
+	a. Keresd meg a hibát, hogy miért nem jelenik meg a példa kalkuláció eredménye a kalkulátorban.
 
-	a. Amíg nem kattintott a felhasználó a kalkulálás gombra, addig ne jelenjen meg a találati lista.
+	b. Módosítsd úgy a kódot, hogy a megtakarítási összeg módosítását követően frissüljön a példakalkuláció eredménye.
+
+	c. Készítsd fel a kódot arra is, ha valamiért a példa kalkuláció hibára fut, vagy nincs eredménye.
+
+2. Találati lista megjelenítése
+
+	a. Módosítsd úgy a kódot, hogy amíg a felhasználó nem kattintott a kalkulálás gombra, addig ne jelenjen meg a találati lista.
 
 	b. Kalkulálás indításakor jelenjen meg a találati lista kezdetben átmeneti töltő állapotban (skeleton).
 
@@ -27,4 +41,4 @@ __Elvárások__:
 
 	e. Ha a kalkuláció hibát ad vissza akkor jelenjen meg egy hibaüzenet.
 
-	f. A találati lista alján legyen egy lapozó gomb, amivel lehet lapozni a találati listán.
+	f. A találati lista alján legyen egy lapozó gomb, amivel lehet navigálni az találatok között.
