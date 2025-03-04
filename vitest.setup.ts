@@ -7,7 +7,7 @@ expect.extend({
 
 		return {
 			pass: element.getAttribute("data-loaded") !== "true",
-			message: () => `It is ${!isNot ? " not" : ""} skeleton`,
+			message: () => `Element is ${!isNot ? "not " : ""} in skeleton state`,
 		};
 	},
 
@@ -16,7 +16,7 @@ expect.extend({
 
 		return {
 			pass: element.getAttribute("data-loading") !== "true",
-			message: () => `It is ${!isNot ? " not" : ""} skeleton`,
+			message: () => `Element is ${!isNot ? "not " : ""} in loading state`,
 		};
 	},
 });
