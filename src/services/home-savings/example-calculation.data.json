@@ -1,0 +1,62 @@
+[
+	{
+		"monthlyDeposit": 10000,
+		"totalPayment": 1200000,
+		"totalInterestWithBonus": 367820,
+		"totalSavings": 1567820
+	},
+	{
+		"monthlyDeposit": 20000,
+		"totalPayment": 2400000,
+		"totalInterestWithBonus": 735630,
+		"totalSavings": 3135630
+	},
+	{
+		"monthlyDeposit": 30000,
+		"totalPayment": 3600000,
+		"totalInterestWithBonus": 1103462,
+		"totalSavings": 4703462
+	},
+	{
+		"monthlyDeposit": 40000,
+		"totalPayment": 4800000,
+		"totalInterestWithBonus": 1471274,
+		"totalSavings": 6271274
+	},
+	{
+		"monthlyDeposit": 50000,
+		"totalPayment": 6000000,
+		"totalInterestWithBonus": 1839106,
+		"totalSavings": 7839106
+	},
+	{
+		"monthlyDeposit": 60000,
+		"totalPayment": 7200000,
+		"totalInterestWithBonus": 2206926,
+		"totalSavings": 9406926
+	},
+	{
+		"monthlyDeposit": 70000,
+		"totalPayment": 8400000,
+		"totalInterestWithBonus": 2574736,
+		"totalSavings": 10974736
+	},
+	{
+		"monthlyDeposit": 80000,
+		"totalPayment": 9600000,
+		"totalInterestWithBonus": 2942668,
+		"totalSavings": 12542668
+	},
+	{
+		"monthlyDeposit": 90000,
+		"totalPayment": 10800000,
+		"totalInterestWithBonus": 3310380,
+		"totalSavings": 14110380
+	},
+	{
+		"monthlyDeposit": 100000,
+		"totalPayment": 12000000,
+		"totalInterestWithBonus": 3678212,
+		"totalSavings": 15678212
+	}
+]

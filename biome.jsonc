@@ -1,0 +1,35 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"formatter": {
+		"useEditorconfig": true
+	},
+	"linter": {
+		"rules": {
+			"style": {
+				"useBlockStatements": "warn",
+				"useNamingConvention": "off"
+			},
+			"suspicious": {
+				"noEmptyBlockStatements": "info"
+			},
+			"complexity": {
+				"noForEach": "off"
+			},
+			"nursery": {
+				"useSortedClasses": "warn"
+			}
+		}
+	},
+	"javascript": {
+		"jsxRuntime": "reactClassic"
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "main"
+	}
+}
