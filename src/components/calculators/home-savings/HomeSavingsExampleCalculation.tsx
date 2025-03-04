@@ -9,10 +9,8 @@ interface Props {
 
 export const HomeSavingsExampleCalculation: FC<Props> = ({ monthlySavings }) => {
 	const [isLoaded, setIsLoaded] = useState<boolean>(true);
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const [calculationResult, setCalculationResult] = useState<any>(undefined);
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	const calculateExample = useCallback(async () => {
 		setCalculationResult(undefined);
 
@@ -25,7 +23,6 @@ export const HomeSavingsExampleCalculation: FC<Props> = ({ monthlySavings }) => 
 		setIsLoaded(true);
 	}, []);
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		calculateExample();
 	}, []);
@@ -40,7 +37,7 @@ export const HomeSavingsExampleCalculation: FC<Props> = ({ monthlySavings }) => 
 					className="min-w-16 rounded-md font-semibold text-default-700"
 					isLoaded={isLoaded}
 				>
-					{formatCurrency(calculationResult?.totalPayment || 0)}
+					{formatCurrency(calculationResult?.totalPayment ?? 0)}
 				</Skeleton>
 			</div>
 			<div className="flex justify-between">
@@ -51,7 +48,7 @@ export const HomeSavingsExampleCalculation: FC<Props> = ({ monthlySavings }) => 
 					className="min-w-16 rounded-md font-semibold text-success"
 					isLoaded={isLoaded}
 				>
-					+{formatCurrency(calculationResult?.totalInterestWithBonus || 0)}
+					+{formatCurrency(calculationResult?.totalInterestWithBonus ?? 0)}
 				</Skeleton>
 			</div>
 			<Divider className="opacity-75" />
@@ -63,7 +60,7 @@ export const HomeSavingsExampleCalculation: FC<Props> = ({ monthlySavings }) => 
 					className="min-w-16 rounded-md font-semibold text-default-700"
 					isLoaded={isLoaded}
 				>
-					{formatCurrency(calculationResult?.totalSavings || 0)}
+					{formatCurrency(calculationResult?.totalSavings ?? 0)}
 				</Skeleton>
 			</div>
 		</dl>

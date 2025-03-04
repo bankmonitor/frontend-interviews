@@ -14,7 +14,7 @@ export const ResultItemData: FC<Props> = ({ className, title, children, "data-te
 	const { isLoaded } = useListingCalculatorContext();
 
 	return (
-		<div className={clsx("px-8 py-4", "text-center", className)}>
+		<div className={clsx("sm:px-8 sm:py-4", "text-center", className)}>
 			<Skeleton className="inline-block min-w-16 rounded-md" isLoaded={isLoaded} data-testid={dataTestId}>
 				<span className="font-semibold text-xl">{children}</span>
 			</Skeleton>

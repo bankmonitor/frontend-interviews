@@ -1,5 +1,5 @@
 import { PhoneIcon } from "@heroicons/react/16/solid";
-import { Badge, Button, Card, CardBody, CardFooter, CardHeader, Chip, Divider, Skeleton } from "@heroui/react";
+import { Button, Card, CardBody, Skeleton } from "@heroui/react";
 import type { FC, ReactNode } from "react";
 import { useListingCalculatorContext } from "./ListingCalculatorProvider";
 
@@ -48,11 +48,11 @@ export const ResultItem: FC<ResultItemProps> = ({ index, title, providerName, ch
 				shadow="md"
 			>
 				<CardBody>
-					<div className="flex items-center justify-between">
+					<div className="flex flex-col items-center justify-between sm:flex-row">
 						<div>{children}</div>
 						<Skeleton className="rounded-lg" isLoaded={isLoaded}>
 							<Button
-								className="me-8 bg-gradient-to-l from-primary-500 to-primary-400 px-8 shadow-lg"
+								className="mt-4 bg-gradient-to-l from-primary-500 to-primary-400 px-8 shadow-lg sm:me-8 sm:mt-0"
 								color="primary"
 								size="lg"
 								startContent={<PhoneIcon className="size-6" />}

@@ -34,7 +34,7 @@ export const HomeSavingsResultItem: React.FC<HomeSavingsResultItemProps> = ({
 			</>
 		}
 	>
-		<div className="grid grid-cols-4 gap-4">
+		<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 			<ResultItemData
 				className="scale-125 text-secondary"
 				title="Teljes megtakarítás"

@@ -1,5 +1,5 @@
 import { BanknotesIcon } from "@heroicons/react/16/solid";
-import { Button, Card, CardBody, CardFooter, Checkbox, Divider, Form, NumberInput } from "@heroui/react";
+import { Button, Card, CardBody, CardFooter, Divider, Form, NumberInput } from "@heroui/react";
 import { type FC, type FormEvent, useState } from "react";
 import { HomeSavingsExampleCalculation } from "./HomeSavingsExampleCalculation";
 import { useHomeSavings } from "./HomeSavingsProvider";
@@ -7,16 +7,14 @@ import { useHomeSavings } from "./HomeSavingsProvider";
 export const HomeSavingsForm: FC = () => {
 	const { onCalculate, isLoaded } = useHomeSavings();
 	const [monthlySavings, setMonthlySavings] = useState(50_000);
-	const [withMortgage, setWithMortgage] = useState(false);
-	const [noAdditionalProducts, setNoAdditionalProducts] = useState(false);
 
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 
 		onCalculate({
 			monthlySavings,
-			withMortgage,
-			noAdditionalProducts,
+			withMortgage: false,
+			noAdditionalProducts: true,
 		});
 	};
 
@@ -48,21 +46,6 @@ export const HomeSavingsForm: FC = () => {
 					max={100_000}
 					isRequired
 				/>
-			</CardBody>
-			<CardBody className="hidden">
-				<fieldset>
-					<legend className="pb-2 text-foreground-500">Egyéb beállítások</legend>
-					<Checkbox name="withMortgage" checked={withMortgage} onValueChange={setWithMortgage}>
-						Lakáshitellel együtt
-					</Checkbox>
-					<Checkbox
-						name="noAdditionalProducts"
-						checked={noAdditionalProducts}
-						onValueChange={setNoAdditionalProducts}
-					>
-						Nem kíván plusz terméket igénybe venni hozzá
-					</Checkbox>
-				</fieldset>
 			</CardBody>
 			<CardBody>
 				<Divider className="mx-auto mb-4 h-1 w-12 bg-primary" />
