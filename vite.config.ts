@@ -9,5 +9,6 @@ export default defineConfig({
 		proxy: {
 			"/api": "https://api.bankmonitor.hu",
 		},
+		host: "127.0.0.1",
 	},
 });
