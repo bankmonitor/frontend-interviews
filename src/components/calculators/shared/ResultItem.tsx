@@ -1,7 +1,6 @@
 import { PhoneIcon } from "@heroicons/react/16/solid";
 import { Button, Card, CardBody, Skeleton } from "@heroui/react";
 import type { FC, ReactNode } from "react";
-import { useListingCalculatorContext } from "./ListingCalculatorProvider";
 
 export interface ResultItemProps {
 	index: number;
@@ -11,11 +10,17 @@ export interface ResultItemProps {
 	children?: ReactNode;
 
 	onInterestClick?: () => void;
+	isLoaded?: boolean;
 }
 
-export const ResultItem: FC<ResultItemProps> = ({ index, title, providerName, children, onInterestClick }) => {
-	const { isLoaded } = useListingCalculatorContext();
-
+export const ResultItem: FC<ResultItemProps> = ({
+	index,
+	title,
+	providerName,
+	children,
+	onInterestClick,
+	isLoaded = true,
+}) => {
 	return (
 		<div className="mb-6" data-testid={`result-item-${index}`}>
 			<div className="my-3 flex items-center text-2xl">

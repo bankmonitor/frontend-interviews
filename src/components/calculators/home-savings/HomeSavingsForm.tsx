@@ -1,21 +1,33 @@
+import { calculation } from "@/services/home-savings/calculation";
 import { BanknotesIcon } from "@heroicons/react/16/solid";
 import { Button, Card, CardBody, CardFooter, Divider, Form, NumberInput } from "@heroui/react";
 import { type FC, type FormEvent, useState } from "react";
+import { mapParameters, mapResultItem } from "./domain";
 import { HomeSavingsExampleCalculation } from "./HomeSavingsExampleCalculation";
-import { useHomeSavings } from "./HomeSavingsProvider";
-
 export const HomeSavingsForm: FC = () => {
-	const { onCalculate, isLoaded } = useHomeSavings();
 	const [monthlySavings, setMonthlySavings] = useState(50_000);
+	const isLoaded = true;
 
-	const handleSubmit = (e: FormEvent) => {
+	const handleSubmit = async (e: FormEvent) => {
 		e.preventDefault();
 
-		onCalculate({
+		// TODO: Store results, page and total somewhere so we can use them in the result list
+		const parameters = {
 			monthlySavings,
 			withMortgage: false,
 			noAdditionalProducts: true,
-		});
+		};
+		const paging = {
+			page: 1,
+			size: 10,
+		};
+		const response = await calculation(mapParameters(parameters), paging);
+
+		const results = response.results.map(mapResultItem);
+		const page = response.page;
+		const total = response.total;
+
+		console.log({ results, page, total });
 	};
 
 	return (

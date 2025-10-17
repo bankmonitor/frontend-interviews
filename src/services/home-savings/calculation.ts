@@ -1,4 +1,4 @@
-import type { PaginationParams, PaginationResult } from "@/components/calculators/listing-calculator/types";
+import type { PaginationParams, PaginationResult } from "@/components/calculators/shared/types";
 import type { HomeSavingsCalculatorParameters, HomeSavingsCalculatorResult } from "./calculation.type";
 
 /**

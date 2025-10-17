@@ -1,7 +1,7 @@
 import { formatCurrency, formatMonths, formatPercent, optionalFormat } from "@/utils/formatter";
 import React from "react";
-import { ResultItem } from "../listing-calculator/ResultItem";
-import { ResultItemData } from "../listing-calculator/ResultItemData";
+import { ResultItem } from "../shared/ResultItem";
+import { ResultItemData } from "../shared/ResultItemData";
 
 interface HomeSavingsResultItemProps {
 	index: number;

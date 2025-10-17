@@ -1,10 +1,10 @@
 {
-    "configurations": [
-        {
-            "command": "npm run dev",
-            "name": "Run dev",
-            "request": "launch",
-            "type": "node-terminal"
-        }
-    ]
+	"configurations": [
+		{
+			"command": "npm run dev",
+			"name": "Run dev",
+			"request": "launch",
+			"type": "node-terminal"
+		}
+	]
 }
